@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simapi | Login</title>
+  <link rel="shortcut icon" type="image/png" href="./assets/images/logos/favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative overflow-hidden min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center min-vh-100 w-100">
+        <div class="row justify-content-center w-100 min-vh-100">
+          <div class="col-md-12 col-lg-6 col-xxl-3 d-flex align-items-center justify-content-center p-4">
+            <div class="auth-form">
+              <h2 class="fw-bolder text-gray-400">Login</h2>
+              <p class="text-body-secondary"><u>Enter your username and password to log in!</u></p>
+              <form id="loginForm">
+                <div class="alert alert-danger w-100 d-none alert-message"></div>
+                <div class="mb-2">
+                  <label for="exampleInputEmail1" class="form-label">Username*</label>
+                  <input type="text" name="username" id="username" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="username">
+                </div>
+                <div class="mb-2">
+                  <label for="exampleInputPassword1" class="form-label">Password*</label>
+                  <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="password">
+                </div>
+                <div class="d-flex align-items-end justify-content-end mb-2">
+                  <a class="text-primary fw-bold" href="./index.php">Forgot Password ?</a>
+                </div>
+                <div class="d-flex align-items-start justify-content-between mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label text-dark" for="flexCheckChecked">
+                      Keep me logged in
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-8 fs-4 rounded-2 mb-2 btn-login">Login</button>
+                <a href="./signup" class="text-body-secondary w-100 py-8 fs-4 text-center d-block"><u>Register</u></a>
+              </form>
+            </div>
+          </div>
+          <div class="d-none d-lg-flex col-md-6 col-lg-6 col-xxl-9 pe-0 ps-5">
+            <div class="auth-decorator w-100 vh-100 p-2 d-flex flex-column align-items-center justify-content-center">
+              <h1 class="fw-bolder text-white">SIMAPI</h1>
+              <h2 class="fw-bolder text-center text-white">Sistem Monitoring Alat Pengering Ikan</h2>
+              <img src="./assets/images/logos/uho_logo.png" class="p-4" alt="UHO">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/pages/login.js"></script>
+
+</body>
+
+</html>
