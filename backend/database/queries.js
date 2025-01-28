@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS history (
     ppm DOUBLE NOT NULL,
     prob_suhu BOOLEAN NOT NULL,
     prob_kelembapan BOOLEAN NOT NULL,
+    prob_ikan BOOLEAN NOT NULL,
     prob_ppm BOOLEAN NOT NULL,
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 )
@@ -70,7 +71,7 @@ SELECT * FROM history ORDER BY timestamp DESC LIMIT 1
 
 
 const createNewHistory = `
-INSERT INTO history(suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ppm) VALUES(?, ?, ?, ?, ?, ?)
+INSERT INTO history(suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ikan, prob_ppm) VALUES(?, ?, ?, ?, ?, ?, ?)
 `;
 
 module.exports = {

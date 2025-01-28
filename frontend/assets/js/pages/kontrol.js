@@ -15,10 +15,14 @@ function handleDataChange(mqttData) {
     const tempValueTable = document.getElementById('temperature-value-table');
     const humidityValueTable = document.getElementById('humidity-value-table');
     const ppmValueTable = document.getElementById('ppm-value-table');
+    const fishConditionTable = document.getElementById('fish-condition-table');
     const ppmTypeValueTable = document.getElementById('ppm-type-value-table');
 
     const quality_theme = (!mqttData.prob_ppm) ? 'success' : 'danger';
     const quality_content = (!mqttData.prob_ppm) ? 'Mati' : 'Menyala';
+
+    const fish_theme = (!mqttData.prob_ikan) ? 'success' : 'danger';
+    const fish_content = (!mqttData.prob_ikan) ? 'Kering' : 'Basah';
 
     tempValue.textContent = "";
     tempType.textContent = "";
@@ -42,6 +46,7 @@ function handleDataChange(mqttData) {
     humidityValueTable.textContent = mqttData.kelembapan;
     ppmValueTable.textContent = mqttData.ppm;
     ppmTypeValueTable.innerHTML = `<span class="badge bg-${quality_theme}">${quality_content}</span>`;
+    fishConditionTable.innerHTML = `<span class="badge bg-${fish_theme}">${fish_content}</span>`;
 
     tempDeg = 45 + (mqttData.suhu / tempMax * 180);
     humidityDeg = 45 + (mqttData.kelembapan / humidityMax * 180);

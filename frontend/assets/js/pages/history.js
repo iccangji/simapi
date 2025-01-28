@@ -13,6 +13,7 @@ const handleDataTable = (data) => {
                 <td>${row.kelembapan}</td>
                 <td>${row.ppm}</td>
                 <td>${timeData}</td>
+                <td>${(!row.prob_ikan) ? "Kering" : "Basah"}</td>
                 <td>${(!row.prob_ppm) ? "Mati" : "Menyala"}</td>
             `;
         tableBody.appendChild(tr);

@@ -19,9 +19,8 @@ const setupMqttClient = (brokerUrl, topic, callback) => {
             const mqttData = JSON.parse(message.toString());
             console.log('MQTT data has received!');
             callback(topic, mqttData);
-
             asyncHandler(
-                historyController.create(mqttData.suhu, mqttData.kelembapan, mqttData.ppm, mqttData.prob_suhu, mqttData.prob_kelembapan, mqttData.prob_ppm)
+                historyController.create(mqttData.suhu, mqttData.kelembapan, mqttData.ppm, mqttData.prob_suhu, mqttData.prob_kelembapan, mqttData.prob_ikan, mqttData.prob_ppm)
             );
 
             console.log('MQTT data has saved!');

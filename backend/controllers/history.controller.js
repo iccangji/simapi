@@ -6,7 +6,7 @@ exports.index = (req, res) => {
 }
 
 
-exports.create = (suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ppm) => {
+exports.create = (suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ikan, prob_ppm) => {
 
     const data = new History(
         suhu,
@@ -14,6 +14,7 @@ exports.create = (suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ppm) =
         ppm,
         prob_suhu,
         prob_kelembapan,
+        prob_ikan,
         prob_ppm);
     History.create(data, (err, data) => {
         if (err) {

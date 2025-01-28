@@ -10,12 +10,13 @@ const {
 const { logger } = require('../utils/logger');
 
 class History {
-    constructor(suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ppm) {
+    constructor(suhu, kelembapan, ppm, prob_suhu, prob_kelembapan, prob_ikan, prob_ppm) {
         this.suhu = suhu;
         this.kelembapan = kelembapan;
         this.ppm = ppm;
         this.prob_suhu = prob_suhu;
         this.prob_kelembapan = prob_kelembapan;
+        this.prob_ikan = prob_ikan;
         this.prob_ppm = prob_ppm;
     }
 
@@ -96,6 +97,7 @@ class History {
                 newData.ppm,
                 newData.prob_suhu,
                 newData.prob_kelembapan,
+                newData.prob_ikan,
                 newData.prob_ppm,
             ], (err) => {
                 if (err) {
